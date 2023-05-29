@@ -1,6 +1,6 @@
 {
   "name": "@moosesaid/gtm",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A forked version of Google Tag Manager Module for Nuxt.js (@nuxtjs/gtm) with support for PartyTown 'type' property",
   "repository": "MooseSaeed/gtm-module",
   "license": "MIT",
