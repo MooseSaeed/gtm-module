@@ -2,6 +2,48 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.1.0 (2023-05-29)
+
+
+### Features
+
+* :sparkles: party town type property ([af04092](https://github.com/MooseSaeed/gtm-module/commit/af040925733aeb13d1293f559e56f72762aa0955))
+* support `crossOrigin` option ([#78](https://github.com/MooseSaeed/gtm-module/issues/78)) ([e843176](https://github.com/MooseSaeed/gtm-module/commit/e8431767b72e63d67968d811fe5919011b441f57))
+* **module:** add support for runtimeConfig ([#53](https://github.com/MooseSaeed/gtm-module/issues/53)) ([2bc1735](https://github.com/MooseSaeed/gtm-module/commit/2bc173538ea255deea13ad575fefc82b7a28e3f0))
+* **plugin:** add `debug` option and disable by default ([#61](https://github.com/MooseSaeed/gtm-module/issues/61)) ([37f13e5](https://github.com/MooseSaeed/gtm-module/commit/37f13e551518efa5aa88c095a544a73c8ac5fc9b))
+* allow manually init with multiple ids (closes [#1](https://github.com/MooseSaeed/gtm-module/issues/1), [#4](https://github.com/MooseSaeed/gtm-module/issues/4), [#5](https://github.com/MooseSaeed/gtm-module/issues/5)) ([accfa77](https://github.com/MooseSaeed/gtm-module/commit/accfa77f92fa918412b19742ca13dbeedddef732))
+* enable noscript by default ([f511404](https://github.com/MooseSaeed/gtm-module/commit/f511404d2a46d082e4f730daeb618543692d748d))
+* initial commit for v2 ([aeba6da](https://github.com/MooseSaeed/gtm-module/commit/aeba6dadb82ad5035a32a3fca414046600baad3d))
+* push page title to dataLayer ([#8](https://github.com/MooseSaeed/gtm-module/issues/8)) ([9434562](https://github.com/MooseSaeed/gtm-module/commit/943456256c5eba9ec0104ca5a9b2f8aee31f66ea))
+* require nuxt > 2.12 to avoid ssr memory leak ([43f41c8](https://github.com/MooseSaeed/gtm-module/commit/43f41c8e7ce58ca40476cc9624be8464908b2d91))
+* ssr iframe injection ([d678f16](https://github.com/MooseSaeed/gtm-module/commit/d678f16d46343e54ba788d0e13399d3b3c2234f7))
+* ssr support ([d896618](https://github.com/MooseSaeed/gtm-module/commit/d896618ef23b4a6fbc723133d3b6b7266f67aad5))
+* use mock version for nuxt dev ([ec85699](https://github.com/MooseSaeed/gtm-module/commit/ec856996a7caa6f6ef0c21c7c03457ec1a27552c)), closes [#32](https://github.com/MooseSaeed/gtm-module/issues/32)
+
+
+### Bug Fixes
+
+* :bug: fix ([5396f52](https://github.com/MooseSaeed/gtm-module/commit/5396f52754df97d6e521c59260c714a56f5fa953))
+* :bug: fix ([f84fe2c](https://github.com/MooseSaeed/gtm-module/commit/f84fe2c280d810d30f583b9be10608c7f83c9dd3))
+* :bug: fix linting ([00ed6ff](https://github.com/MooseSaeed/gtm-module/commit/00ed6ffdd744b338b901663a5f0646edab647fc3))
+* :bug: fix pushing type ([ade5e2d](https://github.com/MooseSaeed/gtm-module/commit/ade5e2d4f4f35aa4a1c8312856f8590d1bc2712a))
+* :bug: fix script ([f297d84](https://github.com/MooseSaeed/gtm-module/commit/f297d84434bb1d5fc320337f9c2db4c117726fee))
+* :bug: revert no script type ([7e1e7a0](https://github.com/MooseSaeed/gtm-module/commit/7e1e7a0834a9fa3a3de346095c0349575fcb18c3))
+* **module:** allow client side push before init ([#60](https://github.com/MooseSaeed/gtm-module/issues/60)) ([c9b073a](https://github.com/MooseSaeed/gtm-module/commit/c9b073a9c9f84ccb5271fb70fc602b1fe6f187c4))
+* **plugin:** find head script ([#59](https://github.com/MooseSaeed/gtm-module/issues/59)) ([d9deea9](https://github.com/MooseSaeed/gtm-module/commit/d9deea9fcf0f15b38668a9a6ab9f36cbb149efe2))
+* **plugin:** load SSR events before container loaded ([#51](https://github.com/MooseSaeed/gtm-module/issues/51)) ([498f9bd](https://github.com/MooseSaeed/gtm-module/commit/498f9bd317469e143b81e34c36b48abc8d1ca5be))
+* **plugin.mock:** handle `event.eventCallback` ([#76](https://github.com/MooseSaeed/gtm-module/issues/76)) ([cdb0c5c](https://github.com/MooseSaeed/gtm-module/commit/cdb0c5c3a5ce07ca3cadcafa673b0397f31dfc75))
+* add id to noscript iframe ([b345db7](https://github.com/MooseSaeed/gtm-module/commit/b345db7deddf2fe2e11e5ee2925deda51c739b95))
+* always render noscript block ([a921b42](https://github.com/MooseSaeed/gtm-module/commit/a921b4235a77562e52f0aaf4b62fe2c4023d91e0))
+* call startPageTracking on client only ([774fccf](https://github.com/MooseSaeed/gtm-module/commit/774fccffd8c9712229c9c4d90512f88546fe5ce4))
+* check respectDoNotTrack option value ([#37](https://github.com/MooseSaeed/gtm-module/issues/37)) ([b1a938c](https://github.com/MooseSaeed/gtm-module/commit/b1a938c44f953bd35f9a00e42189ee0291015d41))
+* fix doNotTrack polyfill ([#87](https://github.com/MooseSaeed/gtm-module/issues/87)) ([c69d1cf](https://github.com/MooseSaeed/gtm-module/commit/c69d1cf87179ad77a245fb7a745731ce666630bf))
+* pageTitle is not available on SSR ([228d796](https://github.com/MooseSaeed/gtm-module/commit/228d796c8b3c982520c26c296e9a2af937f90e28))
+* prepend `router.base` when sending page track events ([#20](https://github.com/MooseSaeed/gtm-module/issues/20)) ([2940d85](https://github.com/MooseSaeed/gtm-module/commit/2940d8540b813677ffbea81874913cd8c82db50b))
+* **module:** warn about head as a function in nuxt config is not supported ([#14](https://github.com/MooseSaeed/gtm-module/issues/14)) ([8b37f8d](https://github.com/MooseSaeed/gtm-module/commit/8b37f8d7075b0015beb8abbd6ba4a76884e56447))
+* guard against double script executation ([#3](https://github.com/MooseSaeed/gtm-module/issues/3)) ([970e0e6](https://github.com/MooseSaeed/gtm-module/commit/970e0e6965d1f1d3fce1d5c6bc47576d3a9079a9))
+* prevent calling init with initial id when autoInit enabled ([24744a5](https://github.com/MooseSaeed/gtm-module/commit/24744a50e95b48ec1f16f02f8ba652e5415123f1))
+
 ## [2.4.0](https://github.com/nuxt-community/gtm-module/compare/v2.3.2...v2.4.0) (2020-11-10)
 
 

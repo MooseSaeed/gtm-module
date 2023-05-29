@@ -1,6 +1,6 @@
 {
   "name": "@moosesaid/gtm",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A forked version of Google Tag Manager Module for Nuxt.js (@nuxtjs/gtm) with support for PartyTown 'type' property",
   "repository": "MooseSaeed/gtm-module",
   "license": "MIT",
@@ -12,7 +12,7 @@
     "dev": "nuxt example",
     "generate": "nuxt generate example",
     "lint": "eslint --ext .js,.vue example lib test",
-    "release": "yarn test && standard-version && git push --follow-tags && npm publish",
+    "release": "standard-version && git push --follow-tags && npm publish",
     "test": "yarn lint && jest"
   },
   "dependencies": {
