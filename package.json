@@ -1,7 +1,7 @@
 {
-  "name": "@nuxtjs/gtm",
-  "version": "2.4.0",
-  "description": "Google Tag Manager Module for Nuxt.js",
+  "name": "@moosesaid/gtm",
+  "version": "1.0.0",
+  "description": "Google Tag Manager Module for Nuxt.js with support for PartyTown 'type' property",
   "repository": "nuxt-community/gtm-module",
   "license": "MIT",
   "main": "lib/module.js",
