@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/moosesaeed/gtm-module/compare/v1.1.3...v1.0.1) (2023-05-29)
+
+
+### Bug Fixes
+
+* :bug: fix ([20c89e2](https://github.com/moosesaeed/gtm-module/commit/20c89e20a8b411c4d61565aa2ec530bf7814f346))
+
 ### [1.1.3](https://github.com/MooseSaeed/gtm-module/compare/v1.1.2...v1.1.3) (2023-05-29)
 
 ### [1.1.2](https://github.com/MooseSaeed/gtm-module/compare/v1.1.1...v1.1.2) (2023-05-29)
