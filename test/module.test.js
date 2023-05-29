@@ -1,17 +1,22 @@
 const path = require('path')
 const { setup, loadConfig, get, url } = require('@nuxtjs/module-test-utils')
-const defaultSettings = require(path.join(__dirname, '../', 'lib', 'defaults.js'))
+const defaultSettings = require(path.join(
+  __dirname,
+  '../',
+  'lib',
+  'defaults.js'
+))
 
 function expectPageTrackingEvent (eventsArray, expectedEvent) {
   return new Promise((resolve) => {
     // Need to wait at least 250ms as that's how long plugin delays before triggering event.
     setTimeout(() => {
       expect(eventsArray).toStrictEqual(
-        expect.arrayContaining([
-          expect.objectContaining(expectedEvent)
-        ])
+        expect.arrayContaining([expect.objectContaining(expectedEvent)])
       )
-      expect(eventsArray.filter(event => event.event === 'nuxtRoute').length).toBe(1)
+      expect(
+        eventsArray.filter(event => event.event === 'nuxtRoute').length
+      ).toBe(1)
       resolve()
     }, 300)
   })
@@ -32,7 +37,7 @@ for (const mode of modes) {
     const noscriptId = nuxtConfig.gtm.noscriptId || defaultSettings.noscriptId
 
     beforeAll(async () => {
-      ({ nuxt } = (await setup(nuxtConfig)))
+      ({ nuxt } = await setup(nuxtConfig))
     }, 60000)
 
     afterAll(async () => {
@@ -64,7 +69,9 @@ for (const mode of modes) {
     test('Should include runtimeConfig', async () => {
       const window = await nuxt.renderAndGetWindow(url('/'))
 
-      const headGtmScriptsExternal = window.document.querySelectorAll(`head script[src^="https://www.googletagmanager.com/gtm.js?id=${runtimeId}"]`)
+      const headGtmScriptsExternal = window.document.querySelectorAll(
+        `head script[src^="https://www.googletagmanager.com/gtm.js?id=${runtimeId}"]`
+      )
 
       expect(headGtmScriptsExternal.length).toBe(1)
     })
@@ -72,9 +79,14 @@ for (const mode of modes) {
     test('Verifying duplicate GTM script', async () => {
       const window = await nuxt.renderAndGetWindow(url('/'))
 
-      const headGtmScriptsExternal = window.document.querySelectorAll(`head script[src^="https://www.googletagmanager.com/gtm.js?id=${gtmId}"]`)
-      const headGtmScriptsHid = window.document.querySelectorAll(`head script[data-hid="${scriptId}"]`)
-      const totalAmoutOfGtmScriptsAtHead = headGtmScriptsExternal.length + headGtmScriptsHid.length
+      const headGtmScriptsExternal = window.document.querySelectorAll(
+        `head script[src^="https://www.googletagmanager.com/gtm.js?id=${gtmId}"]`
+      )
+      const headGtmScriptsHid = window.document.querySelectorAll(
+        `head script[data-hid="${scriptId}"]`
+      )
+      const totalAmoutOfGtmScriptsAtHead =
+        headGtmScriptsExternal.length + headGtmScriptsHid.length
 
       expect(totalAmoutOfGtmScriptsAtHead).toBeLessThan(4)
     })
@@ -82,11 +94,11 @@ for (const mode of modes) {
     test('Should include pushed event', async () => {
       const window = await nuxt.renderAndGetWindow(url('/'))
       expect(window.dataLayer).toStrictEqual(
-        expect.arrayContaining([
-          expect.objectContaining({ event: 'ssr' })
-        ])
+        expect.arrayContaining([expect.objectContaining({ event: 'ssr' })])
       )
-      expect(window.dataLayer.filter(event => event.event === 'ssr').length).toBe(1)
+      expect(
+        window.dataLayer.filter(event => event.event === 'ssr').length
+      ).toBe(1)
     })
 
     test('Should include page tracking event', async () => {
@@ -94,7 +106,7 @@ for (const mode of modes) {
 
       await expectPageTrackingEvent(window.dataLayer, {
         event: 'nuxtRoute',
-        pageTitle: '@nuxtjs/gtm-module',
+        pageTitle: '@moosesaeed/gtm',
         pageType: 'PageView',
         pageUrl: '/',
         routeName: 'index'
@@ -114,14 +126,16 @@ for (const mode of modes) {
       }
     }
 
-    const nuxtConfig = loadConfig(__dirname, '../../example', override, { merge: true })
+    const nuxtConfig = loadConfig(__dirname, '../../example', override, {
+      merge: true
+    })
     if (!nuxtConfig.router) {
       nuxtConfig.router = {}
     }
     nuxtConfig.router.base = '/base/'
 
     beforeAll(async () => {
-      ({ nuxt } = (await setup(nuxtConfig)))
+      ({ nuxt } = await setup(nuxtConfig))
     }, 60000)
 
     afterAll(async () => {
@@ -133,7 +147,7 @@ for (const mode of modes) {
 
       await expectPageTrackingEvent(window.testDataLayer, {
         event: 'nuxtRoute',
-        pageTitle: '@nuxtjs/gtm-module',
+        pageTitle: '@moosesaeed/gtm',
         pageType: 'PageView',
         pageUrl: '/base/',
         routeName: 'index'
