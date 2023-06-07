@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/moosesaeed/gtm-module/compare/v1.0.6...v1.1.0) (2023-06-07)
+
+
+### Features
+
+* nuxt load ([be8a439](https://github.com/moosesaeed/gtm-module/commit/be8a4393572915cebf68bf179820433baf060b7f))
+
 ### [1.0.6](https://github.com/moosesaeed/gtm-module/compare/v1.0.5...v1.0.6) (2023-06-07)
 
 ### [1.0.5](https://github.com/moosesaeed/gtm-module/compare/v1.0.4...v1.0.5) (2023-06-07)
